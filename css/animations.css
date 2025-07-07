@@ -1,0 +1,206 @@
+/* Logo Slider Animations */
+.trust-logos-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.trust-logos-slider {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.trust-logos-track {
+    display: inline-flex;
+    animation: scroll-logos 30s linear infinite;
+    gap: 40px;
+}
+
+.trust-logos-track img {
+    height: 30px;
+    width: auto;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+
+.trust-logos-track img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Client Logos Section */
+.client-logos {
+    padding: 60px 0;
+    background: #f8fafc;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.client-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.highlight-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 10px;
+}
+
+.client-logos-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.client-logos-wrapper::before,
+.client-logos-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.client-logos-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #f8fafc, transparent);
+}
+
+.client-logos-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #f8fafc, transparent);
+}
+
+.client-logos-slider {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.client-logos-track {
+    display: inline-flex;
+    animation: scroll-logos 40s linear infinite;
+    gap: 60px;
+    align-items: center;
+}
+
+.client-logos-track img {
+    height: 60px;
+    width: auto;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+
+.client-logos-track img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Fade in animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply animations to elements */
+.problem-card,
+.solution-point,
+.case-card,
+.process-step {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Pause animation on hover */
+.trust-logos-slider:hover .trust-logos-track,
+.client-logos-slider:hover .client-logos-track {
+    animation-play-state: paused;
+}
+
+/* Loading animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cta-button.primary {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .trust-logos-track {
+        animation-duration: 20s;
+    }
+
+    .client-title {
+        font-size: 24px;
+    }
+
+    .highlight-number {
+        font-size: 36px;
+    }
+
+    .client-logos-track {
+        gap: 40px;
+        animation-duration: 30s;
+    }
+
+    .client-logos-track img {
+        height: 40px;
+    }
+}

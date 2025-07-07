@@ -1,0 +1,103 @@
+/* Navigation */
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.header-nav a {
+    font-family: var(--font-primary), var(--font-japanese);
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.header-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: var(--primary-blue);
+}
+
+.header-nav a:hover::after {
+    width: 100%;
+}
+
+/* Buttons */
+.header-button {
+    background: var(--accent-orange);
+    color: var(--bg-white);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-primary), var(--font-japanese);
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.3);
+}
+
+.button-icon {
+    font-size: 18px;
+}
+
+.header-button:hover {
+    background: #ff8c00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 149, 0, 0.4);
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-display), var(--font-japanese);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    color: var(--text-dark);
+    letter-spacing: -0.03em;
+}
+
+.section-subtitle {
+    font-family: var(--font-primary), var(--font-japanese);
+    text-align: center;
+    font-size: 20px;
+    color: var(--text-gray);
+    margin-top: -40px;
+    margin-bottom: 60px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.section-subtitle-en {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    color: var(--text-gray);
+}

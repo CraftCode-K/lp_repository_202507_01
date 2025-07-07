@@ -1,0 +1,266 @@
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-highlight {
+        font-size: 60px;
+    }
+
+    .hero-subtitle {
+        font-size: 28px;
+    }
+
+    .hero-features {
+        gap: 40px;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .solution-content,
+    .tab-inner,
+    .contact-wrapper,
+    .download-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .header-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-highlight {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-trust-indicators {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .problem-cards,
+    .case-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        flex-direction: column;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+    }
+
+    .price-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tab-button {
+        width: 100%;
+    }
+
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* CTA */
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Typography */
+    body {
+        font-size: 14px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-highlight {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    /* Components */
+    .header-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .hero-primary-button {
+        padding: 16px 40px;
+    }
+
+    .button-text {
+        font-size: 16px;
+    }
+
+    /* Sections */
+    .hero {
+        padding: 100px 0 40px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    /* Cards */
+    .problem-card,
+    .case-card,
+    .process-step {
+        padding: 30px 20px;
+    }
+
+    .price-card {
+        padding: 40px 30px;
+    }
+
+    .price-number {
+        font-size: 40px;
+    }
+
+    /* Forms */
+    .contact-form,
+    .download-form {
+        padding: 30px;
+    }
+
+    .submit-button,
+    .download-button {
+        font-size: 16px;
+        padding: 16px;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .header-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--bg-white);
+        box-shadow: 0 10px 30px var(--shadow-medium);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .header-nav.mobile-active {
+        transform: translateX(0);
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .header-nav a {
+        font-size: 18px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .comparison-table {
+        font-size: 13px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 15px 10px;
+    }
+
+    .company-header h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ここに768px以下のスタイルを追加 */
+}
